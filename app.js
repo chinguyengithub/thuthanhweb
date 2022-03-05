@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     res.json({message: "Welcome to contact book application."});
 });
 
-
+setupContactRoutes(app);
 
 app.use((req, res, next) => {
     next(new BadRequestError(404, "Resource not found"));
@@ -20,5 +20,5 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
     errorHandler.handleError(err, res);
 });
-setupContactRoutes(app);
+
 module.exports = app;
