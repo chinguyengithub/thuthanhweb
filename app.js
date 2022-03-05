@@ -21,4 +21,8 @@ app.use((err, req, res, next) => {
     errorHandler.handleError(err, res);
 });
 
+<<<<<<< HEAD
 module.exports = app;
+=======
+module.exports = app;
+>>>>>>> 857f9148dfc12787c9660b26aa8c951d9a67afbf
